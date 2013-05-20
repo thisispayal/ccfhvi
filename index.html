@@ -190,17 +190,17 @@
                     </div>
                     <div class="span6">
                         <label class="radio inline">
-                            <input type="radio" name="studytype" value="TEE" />
+                            <input type="radio" class="study-type" name="studytype" value="TEE" />
                             TEE
                         </label>
                         <label class="radio inline">
-                            <input type="radio" name="studytype" value="Echo" />
+                            <input type="radio" class="study-type" name="studytype" value="Echo" />
                             Echo
                         </label>
                     </div>
                 </div>
 
-            <div class="row onload-hidden">
+            <div class="row onload-hidden" id="ReadingMD-row">
                 <div class="span4 offset1">
                     Reading MD
                 </div>
@@ -209,7 +209,7 @@
                 </div>
             </div>
 
-            <div class="row onload-hidden">
+            <div class="row onload-hidden" id="PerformingMD-row">
                 <div class="span4 offset1">
                     Performing MD
                 </div>
@@ -273,12 +273,16 @@
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-
-
-            $("#add-fields").click(function () {
-                var patientField = $(".subtract-template > .form-section").clone().appendTo($("#appendedarea")).show();
+            $(".study-type").click(function () {
+                if ($(this).attr("value", "TEE")) {
+                    $("#PerformingMD-row").hide();
+                    $("#ReadingMD-row").show();
+                }
+                else if($(this.attr("value", "Echo"))) {
+                    $("#ReadingMD-row").hide();
+                    $("#PerformingMD-row").show();
+                }
             });
-
 
 
             $("li").click(function () {
