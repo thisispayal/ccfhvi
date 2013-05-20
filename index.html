@@ -2,80 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>IAC &middot; transmittal mockup</title>
+    <title>CCF &middot; transmittal mockup</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-     ::selection {
-     background-color:black;
-     color:white;
-     }
-        
-      body {
-        padding-top: 20px;
-        padding-bottom: 40px;
-        font-size: 120%;
-      }
+      <style type="text/css">
+          ::selection {
+              background-color: black;
+              color: white;
+          }
 
-      label.radio.inline{
-        font-size: 100%;
-      }
+          body {
+              padding-top: 20px;
+              padding-bottom: 40px;
+              font-size: 120%;
+          }
 
-      .req {
-        color: red;  
-      }
+          label.radio.inline {
+              font-size: 100%;
+          }
 
-      .subhead-font {
-        font-size: 175%;
-      }
+          .subhead-font {
+              font-size: 175%;
+          }
 
-      .footer {
-      font-size: 70%;
-      color: grey;
-      }
-        
-      input[type=text].text-name {
-      width: 93px;
-      }
+          .footer {
+              font-size: 70%;
+              color: grey;
+          }
 
-      #add-patient-text {
-      padding-bottom: 20px;
-      }
+          input[type=text].text-name {
+              width: 93px;
+          }
 
-      #subtract-patient-text {
-      padding-bottom: 20px;
-      }
+          .btn {
+              background-image: none;
+              background-color: rgb(22,63,95);
+              color: white;
+          }
 
-      .subtract-template {
-      display:none;
-      }
+          .form-section {
+              padding-bottom: 35px;
+          }
 
-      .btn{
-        background-image:none;
-        background-color:rgb(22,63,95);
-        color:white;
-      }
+          .dropdown-menu > .active > a {
+              background-color: white;
+              background-image: none;
+              color: black;
+              width: auto;
+          }
 
-     .form-section {
-      padding-bottom: 35px;
-     }
+          .input-append .btn.dropdown-toggle {
+              float: none;
+          }
 
-     .dropdown-menu>.active>a {
-        background-color:white;
-        background-image:none;
-        color: black;
-        width:auto;
-     }
-
-     .input-append .btn.dropdown-toggle {
-        float:none;
-     }
-
-    </style>
+          .req {
+              color: #B02B2C;
+          }
+      </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -88,22 +75,23 @@
 
     <div class="container">
 
-        <h1>Describe Upload</h1>
+        <h1>Describe Images/Files</h1>
+        <b><span class="req">*</span> indicates required</b>
 
         <hr>
 
         <div class="row" id="division-field">
             <div class="span4 offset1">
-                Division
+                Submission Type <span class="req">*</span>
             </div>
             <div class="span6">
                 <div class="input-append btn-group" id="dropdown-field">
-                    <input id="appendedInputButton" size="16" type="text" placeholder="Click down to select division"/>
-                    <a class="btn btn-primary dropdown-toggle" data-toggle ="dropdown" href="#">
+                    <input id="appendedInputButton" size="16" type="text" placeholder="Select submission type" />
+                    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li data-value="ICAEL"><a>ICAEL</a></li>
+                        <li data-value="ICAEL"><a>Echo QA</a></li>
                         <li data-value="ICAVL"><a>ICAVL</a></li>
                         <li data-value="ICANL"><a>ICANL</a></li>
                         <li data-value="ICAMRL"><a>ICAMRL</a></li>
@@ -111,15 +99,14 @@
                         <li data-value="ICACSF"><a>ICACSF</a></li>
                     </ul>
                 </div>
-            
+
             </div>
         </div>
-        
+
         <div class="form-section">
             <div class="row">
                 <div class="span4 offset1">
-                    Application Number
-
+                    Sending Facility <span class="req">*</span>
                 </div>
                 <div class="span6">
                     <input type="text" />
@@ -128,47 +115,89 @@
 
             <div class="row">
                 <div class="span4 offset1">
-                    Number of cases on CD
+                    Study Date <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="date" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Sonographer Name <span class="req">*</span>
                 </div>
                 <div class="span6">
                     <input type="text" />
                 </div>
             </div>
 
-        </div>
-
-        <div class="form-section">
-            <div class="row" id="add-patient-text">
-                <div class="span8">
-                    <div class="btn" id="add-fields"><i class="icon-plus icon-white"></i></div>
-                    <b>Add another patient</b><i></i>
+            <div class="row">
+                <div class="span4 offset1">
+                    Sonographer Initials <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
                 </div>
             </div>
 
-            <div class="patient-info">
+            <div class="row">
+                <div class="span4 offset1">
+                    Referring Physician <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+        </div>
+    
+        <div class="form-section">
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Patient Last Name <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Patient First Name <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Patient MRN <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
                 <div class="row">
                     <div class="span4 offset1">
-                        Patient initials
+                        Study Type <span class="req">*</span>
                     </div>
                     <div class="span6">
-                        <input type="text" class="text-name" placeholder="Last" id="last-name" />
-                        <input type="text" class="text-name" placeholder="First" id="first-name" />
+                        <label class="radio inline">
+                            <input type="radio" name="studytype" value="TEE" />
+                            TEE
+                        </label>
+                        <label class="radio inline">
+                            <input type="radio" name="studytype" value="Echo" />
+                            Echo
+                        </label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="span4 offset1">
-                        Date of study
-                    </div>
-                    <div class="span6">
-                        <input type="date" />
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="span4 offset1">
-                        Type of viewer
-
+                        Sending Personnel <span class="req">*</span>
                     </div>
                     <div class="span6">
                         <input type="text" />
@@ -177,90 +206,14 @@
 
                 <div class="row">
                     <div class="span4 offset1">
-                        Case type
-
+                        Confirmation Email <span class="req">*</span>
                     </div>
                     <div class="span6">
-                        <label class="radio inline">
-                            <input type="radio" name="casetype" value="LV" />
-                            LV
-                        </label>
-                        <label class="radio inline">
-                            <input type="radio" name="casetype" value="AS" />
-                            AS
-                        </label>
-                        <label class="radio inline">
-                            <input type="radio" name="casetype" value="DN" />
-                            Don't know
-                        </label>
+                        <input type="text" />
                     </div>
                 </div>
-            </div>
+
         </div>
-
-        <div class="subtract-template">
-            <div class="form-section">
-                <div class="row" id="subtract-patient-text">
-                    <div class="span8">
-                        <div class="btn collapse-button"><i class="icon-minus icon-white"></i></div>
-                        <b>Remove patient</b><i></i>
-                    </div>
-                </div>
-                <div class="patient-info" id="additional-sub">
-                    <div class="row">
-                        <div class="span4 offset1">
-                            Patient initials
-                        </div>
-                        <div class="span6">
-                            <input type="text" class="text-name" placeholder="Last" id="Text1" />
-                            <input type="text" class="text-name" placeholder="First" id="Text2" />
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="span4 offset1">
-                            Date of study
-                        </div>
-                        <div class="span6">
-                            <input type="date" />
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="span4 offset1">
-                            Type of viewer
-
-                        </div>
-                        <div class="span6">
-                            <input type="text" />
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="span4 offset1">
-                            Case type
-
-                        </div>
-                        <div class="span6">
-                            <label class="radio inline">
-                                <input type="radio" name="casetype" value="LV" />
-                                LV
-                            </label>
-                            <label class="radio inline">
-                                <input type="radio" name="casetype" value="AS" />
-                                AS
-                            </label>
-                            <label class="radio inline">
-                                <input type="radio" name="casetype" value="DN" />
-                                Don't know
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="appendedarea"></div>
 
         <div class="form-section" id="common-section">
             <div class="row">
@@ -287,7 +240,7 @@
             <p>&copy; Vigilant Medical 2013</p>
         </div>
 
-    </div>
+        </div>
     <!-- /container -->
 
     <!-- Le javascript
@@ -297,16 +250,13 @@
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            var fieldwidth = $("input[type=text]").width();
-            console.log(fieldwidth)
+
 
             $("#add-fields").click(function () {
                 var patientField = $(".subtract-template > .form-section").clone().appendTo($("#appendedarea")).show();
             });
 
-            $("#appendedarea").on("click", ".collapse-button", function () {
-                $(this).parents().filter(".form-section").hide();
-            });
+
 
             $("li").click(function () {
                 var textValue = $(this).attr("data-value");
