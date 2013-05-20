@@ -23,6 +23,7 @@
 
           label.radio.inline {
               font-size: 100%;
+              padding-bottom: 13px;
           }
 
           .subhead-font {
@@ -62,6 +63,11 @@
           .req {
               color: #B02B2C;
           }
+
+          .onload-hidden {
+             display:none;
+          }
+
       </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -179,39 +185,57 @@
                 </div>
             </div>
 
-                <div class="row">
-                    <div class="span4 offset1">
-                        Study Type <span class="req">*</span>
-                    </div>
-                    <div class="span6">
-                        <label class="radio inline">
-                            <input type="radio" name="studytype" value="TEE" />
-                            TEE
-                        </label>
-                        <label class="radio inline">
-                            <input type="radio" name="studytype" value="Echo" />
-                            Echo
-                        </label>
-                    </div>
+            <div class="row">
+                <div class="span4 offset1">
+                    Study Type <span class="req">*</span>
                 </div>
+                <div class="span6">
+                    <label class="radio inline">
+                        <input type="radio" class="study-type" name="studytype" value="TEE" />
+                        TEE
+                    </label>
+                    <label class="radio inline">
+                        <input type="radio" class="study-type" name="studytype" value="Echo" />
+                        Echo
+                    </label>
+                </div>
+            </div>
 
-                <div class="row">
-                    <div class="span4 offset1">
-                        Sending Personnel <span class="req">*</span>
-                    </div>
-                    <div class="span6">
-                        <input type="text" />
-                    </div>
+            <div class="row onload-hidden" id="ReadingMD-row">
+                <div class="span4 offset1">
+                    Reading MD
                 </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
 
-                <div class="row">
-                    <div class="span4 offset1">
-                        Confirmation Email <span class="req">*</span>
-                    </div>
-                    <div class="span6">
-                        <input type="text" />
-                    </div>
+            <div class="row onload-hidden" id="PerformingMD-row">
+                <div class="span4 offset1">
+                    Performing MD
                 </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Sending Personnel <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Confirmation Email <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
 
         </div>
 
