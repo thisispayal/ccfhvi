@@ -67,6 +67,7 @@
           .datepicker td.active.active {
             background-image:none;
             background-color:black;
+            color:white;
           }
 
           .datepicker td.active:hover {
@@ -296,6 +297,7 @@
             $(".onselection").hide();
             var dropdownwidth = $(".dropdown-menu").css("width");
             $(".dropdown-menu > li").css("width", dropdownwidth);
+            $(".datepicker").datepicker();
 
 
             $("#EchoQA-choice").click(function () {
