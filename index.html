@@ -270,8 +270,12 @@
             $("#ReadingMD-row").hide();
             $("#PerformingMD-row").hide();
             $(".onselection").hide();
+            var dropdownwidth = $(".dropdown-menu").css("width");
+            $(".dropdown-menu > li").css("width", dropdownwidth);
+
 
             $("#EchoQA-choice").click(function () {
+                $("#appendedInputButton").attr("value", "Echo QA");
                 $(".onselection").show();
             });
 
