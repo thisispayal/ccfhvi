@@ -121,161 +121,15 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li data-value="EchoQA" id="EchoQA-choice"><a>Echo QA</a></li>
+                        <li data-value="SO-med-elect" id="SO-med-elect-choice"><a href="SO-surg-elect.html">Surgical Second Opinion - Elective</a></li>
+                        <li data-value ="SO-surg-elect" id="SO-surg-elect-choice"><a>Medical Second Opinion - Elective</a></li>
                     </ul>
                 </div>
 
             </div>
         </div>
         <div class="onselection">
-        <div class="form-section">
-            <div class="row">
-                <div class="span4 offset1">
-                    Sending Facility <span class="req">*</span>
-                </div>
-                <div class="span6">
-                    <input type="text" />
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="span4 offset1">
-                    Study Date <span class="req">*</span>
-                </div>
-                <div class="span6">
-                    <input id="idStudyDate" type="text" placeholder="mm/dd/yyyy" class="datepicker" name="StudyDate" />
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="span4 offset1">
-                    Sonographer Name <span class="req">*</span>
-                </div>
-                <div class="span6">
-                    <input type="text" />
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="span4 offset1">
-                    Sonographer Initials <span class="req">*</span>
-                </div>
-                <div class="span6">
-                    <input type="text" />
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="span4 offset1">
-                    Referring Physician <span class="req">*</span>
-                </div>
-                <div class="span6">
-                    <input type="text" />
-                </div>
-            </div>
-        </div>
-    
-        <div class="form-section">
-
-            <div class="row">
-                <div class="span4 offset1">
-                    Patient Last Name <span class="req">*</span>
-                </div>
-                <div class="span6">
-                    <input type="text" />
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="span4 offset1">
-                    Patient First Name <span class="req">*</span>
-                </div>
-                <div class="span6">
-                    <input type="text" />
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="span4 offset1">
-                    Patient MRN <span class="req">*</span>
-                </div>
-                <div class="span6">
-                    <input type="text" />
-                </div>
-            </div>
-
-                <div class="row">
-                    <div class="span4 offset1">
-                        Study Type <span class="req">*</span>
-                    </div>
-                    <div class="span6">
-                        <label class="radio inline">
-                            <input type="radio" id="TEE-choice" name="studytype" value="TEE" />
-                            TEE
-                        </label>
-                        <label class="radio inline">
-                            <input type="radio" id="Echo-choice" name="studytype" value="Echo" />
-                            Echo
-                        </label>
-                    </div>
-                </div>
-
-            <div class="row" id="ReadingMD-row">
-                <div class="span4 offset1">
-                    Reading MD <span class="req">*</span>
-                </div>
-                <div class="span6">
-                    <input type="text" />
-                </div>
-            </div>
-
-            <div class="row" id="PerformingMD-row">
-                <div class="span4 offset1">
-                    Performing MD <span class="req">*</span>
-                </div>
-                <div class="span6">
-                    <input type="text" />
-                </div>
-            </div>
-
-                <div class="row">
-                    <div class="span4 offset1">
-                        Sending Personnel <span class="req">*</span>
-                    </div>
-                    <div class="span6">
-                        <input type="text" />
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="span4 offset1">
-                        Confirmation Email <span class="req">*</span>
-                    </div>
-                    <div class="span6">
-                        <input type="text" />
-                    </div>
-                </div>
-
-        </div>
-
-        <div class="form-section" id="common-section">
-            <div class="row">
-                <div class="span4 offset1">
-                    Additional Information
-                </div>
-                <div class="span6">
-                    <textarea rows="4"> </textarea>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="span8">
-                <div class="btn btn-large" style="float: right;">
-                    <b>Continue</b> <i class="icon-chevron-right icon-white"></i>
-                </div>
-            </div>
-        </div>
-        
+       
         </div>
 
         <hr>
@@ -305,7 +159,14 @@
 
 
             $("#EchoQA-choice").click(function () {
+                console.log("yay");
                 $("#appendedInputButton").attr("value", "Echo QA");
+                
+                $.get("EchoQA.html", function (data) {
+                    $(".onselection").append(data);
+                    console.log("success");
+                });
+                
                 $(".onselection").show();
             });
 

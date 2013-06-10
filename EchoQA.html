@@ -1,0 +1,240 @@
+﻿    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      <style type="text/css">
+          ::selection {
+              background-color: black;
+              color: white;
+          }
+
+          body {
+              padding-top: 20px;
+              padding-bottom: 40px;
+              font-size: 120%;
+          }
+
+          label.radio.inline {
+              font-size: 100%;
+              padding-bottom: 13px;
+          }
+
+          .subhead-font {
+              font-size: 175%;
+          }
+
+          .footer {
+              font-size: 70%;
+              color: grey;
+          }
+
+          input[type=text].text-name {
+              width: 93px;
+          }
+
+          .btn {
+              background-image: none;
+              background-color: rgb(22,63,95);
+              color: white;
+          }
+
+          .form-section {
+              padding-bottom: 35px;
+          }
+
+          .dropdown-menu > .active > a {
+              background-color: white;
+              background-image: none;
+              color: black;
+              width: auto;
+          }
+
+          .input-append .btn.dropdown-toggle {
+              float: none;
+          }
+
+          .req {
+              color: #B02B2C;
+          }
+
+          .datepicker td.active.active {
+            background-image:none;
+            background-color:black;
+            color:white;
+          }
+
+          .datepicker td.active:hover {
+            background-image:none;
+          }
+
+          .datepicker td.active.active:hover {
+            background-color: rgb(240,240,240);
+            color:black;
+          }
+
+          td.day:hover {
+            background-color:grey;
+          }
+
+          table thead tr th {
+            background-color: rgba(124,183,227,.2);
+          }
+
+          datepicker table thead tr th {
+            background-color:rgba(124,183,227,.2);
+          }
+
+      </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+<div class="form-section">
+            <div class="row">
+                <div class="span4 offset1">
+                    Sending Facility <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Study Date <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input id="idStudyDate" type="text" placeholder="mm/dd/yyyy" class="datepicker" name="StudyDate" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Sonographer Name <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Sonographer Initials <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Referring Physician <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+        </div>
+    
+        <div class="form-section">
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Patient Last Name <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Patient First Name <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4 offset1">
+                    Patient MRN <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
+                <div class="row">
+                    <div class="span4 offset1">
+                        Study Type <span class="req">*</span>
+                    </div>
+                    <div class="span6">
+                        <label class="radio inline">
+                            <input type="radio" id="TEE-choice" name="studytype" value="TEE" />
+                            TEE
+                        </label>
+                        <label class="radio inline">
+                            <input type="radio" id="Echo-choice" name="studytype" value="Echo" />
+                            Echo
+                        </label>
+                    </div>
+                </div>
+
+            <div class="row" id="ReadingMD-row">
+                <div class="span4 offset1">
+                    Reading MD <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="row" id="PerformingMD-row">
+                <div class="span4 offset1">
+                    Performing MD <span class="req">*</span>
+                </div>
+                <div class="span6">
+                    <input type="text" />
+                </div>
+            </div>
+
+                <div class="row">
+                    <div class="span4 offset1">
+                        Sending Personnel <span class="req">*</span>
+                    </div>
+                    <div class="span6">
+                        <input type="text" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="span4 offset1">
+                        Confirmation Email <span class="req">*</span>
+                    </div>
+                    <div class="span6">
+                        <input type="text" />
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="form-section" id="common-section">
+            <div class="row">
+                <div class="span4 offset1">
+                    Additional Information
+                </div>
+                <div class="span6">
+                    <textarea rows="4"> </textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span8">
+                <div class="btn btn-large" style="float: right;">
+                    <b>Continue</b> <i class="icon-chevron-right icon-white"></i>
+                </div>
+            </div>
+        </div>
+        

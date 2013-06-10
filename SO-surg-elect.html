@@ -1,0 +1,478 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CCF &middot; transmittal mockup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      <style type="text/css">
+          ::selection {
+              background-color: black;
+              color: white;
+          }
+
+          body {
+              padding-top: 20px;
+              padding-bottom: 40px;
+              font-size: 120%;
+          }
+
+          label.radio.inline {
+              font-size: 100%;
+              padding-bottom: 13px;
+          }
+
+          .subhead-font {
+              font-size: 175%;
+          }
+
+          .footer {
+              font-size: 70%;
+              color: grey;
+          }
+
+          input[type=text].text-name {
+              width: 93px;
+          }
+
+          .btn {
+              background-image: none;
+              background-color: rgb(22,63,95);
+              color: white;
+          }
+
+          .form-section {
+              padding-bottom: 35px;
+          }
+
+          .dropdown-menu > .active > a {
+              background-color: white;
+              background-image: none;
+              color: black;
+              width: auto;
+          }
+
+          .input-append .btn.dropdown-toggle {
+              float: none;
+          }
+
+          .req {
+              color: #B02B2C;
+          }
+
+          .datepicker td.active.active {
+            background-image:none;
+            background-color:black;
+            color:white;
+          }
+
+          .datepicker td.active:hover {
+            background-image:none;
+          }
+
+          .datepicker td.active.active:hover {
+            background-color: rgb(240,240,240);
+            color:black;
+          }
+
+          td.day:hover {
+            background-color:grey;
+          }
+
+          table thead tr th {
+            background-color: rgba(124,183,227,.2);
+          }
+
+          datepicker table thead tr th {
+            background-color:rgba(124,183,227,.2);
+          }
+
+                  .btn {
+        color: white;
+        font-size: 16.5px;
+        text-decoration:none;
+        text-shadow:none;
+        -webkit-box-shadow:none;
+        -moz-box-shadow:none;
+        text-shadow:none;
+        -webkit-transition: 0.25s;
+        -moz-transition: .25s;
+        -o-transition: .25s;
+        transition: .25s;
+        -webkit-background-visibility: hidden;
+        font-family: "Lato",sans-serif;
+        padding:.35em .65em;
+        border: 1px solid rgba(0, 0, 0,.1)
+        }
+
+        .btn.btn-upload { 
+            background:rgb(122,174,209);
+            font-size: 14px;
+        }
+
+       .btn.btn-upload:hover {
+           background-color: black;
+           color: white;
+       }
+
+        body .body-multiline
+        {
+            padding-bottom:10px;
+        }
+
+        fieldset {
+        display:block;
+        -webkit-margin-start: 2px;
+        -webkit-margin-end: 2px;
+        -webkit-padding-before: 0.35em;
+        -webkit-padding-start: 0.75em;
+        -webkit-padding-end: 0.75em;
+        -webkit-padding-after: 0.625em;
+        border: 2px groove threedface;
+        }
+
+        legend {
+        padding: 0.2em 0.5em;
+        font-size: 150%;
+        text-align: right;
+        }
+
+        label {
+            float:left;
+            width: 25%;
+            margin-right: 0.5em;
+            padding-top: 0.2em;
+            text-align: right;
+            font-weight: bold;
+        }
+
+      </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+<body>
+    <div class="container">
+    <p>
+        <div class="row">
+            <div class="span12 body-multiline">
+                <b>Please Note:</b>
+                <i>This is NOT to be used for EMERGENCY cases. If you have an urgent request, please call Dr. Lytle's office at 216-444-6962</i>
+            </div>
+        </div>
+    </p>
+
+    <fieldset>
+        <legend>Request</legend>
+
+        <div class="row">
+            <div class="span4 offset1">
+                Sending Personnel
+            </div>
+            <div class="span6">
+                <input type="text" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4 offset1">
+                Confirmation E-mail
+            </div>
+            <div class="span6">
+                <input type="text" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4 offset1">
+                Physician Name
+            </div>
+            <div class="span4">
+                <input type="text" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4 offset1 body-multiline">
+                Has anyone from Cleveland Clinic been contacted regarding the patient?
+            </div>
+            <div class="span1">
+                <label class="checkbox inline">
+                    <input id="contact-check" type="checkbox" name="contacted" />
+                    Yes
+                </label>
+            </div>
+        </div>
+
+        <div class="opt">
+            <div class="row">
+                <div class="span4 offset1">
+                    Name of person contacted:
+                </div>
+                <div class="span2">
+                    <input type="text" /></div>
+            </div>
+
+            <div class="row">
+                <div class="span4 offset1">When did the contact occur?</div>
+                <div class="span2">
+                    <input type="text" class="datepicker" /></div>
+            </div>
+        </div>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Patient Demographics</legend>
+        <div class="row">
+            <div class="span4 offset1">
+                Patient Last Name
+            </div>
+            <div class="span6">
+                <input type="text" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4 offset1">
+                Patient First Name
+            </div>
+            <div class="span6">
+                <input type="text" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4 offset1">
+                Patient Date of Birth
+            </div>
+            <div class="span6">
+                <input type="text" class="datepicker" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4 offset1">
+                Home Address
+            </div>
+            <div class="span6">
+                <input type="text" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4 offset1">
+                Home Phone
+            </div>
+            <div class="span6">
+                <input type="text" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4 offset1">
+                Cell Phone
+            </div>
+            <div class="span6">
+                <input type="text" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4 offset1">
+                Social Security Number
+            </div>
+            <div class="span6">
+                <input type="text" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4 offset1">
+                Patient Email Address
+            </div>
+            <div class="span6">
+                <input type="text" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4 offset1">
+                Hospital ID Number
+            </div>
+            <div class="span6">
+                <input type="text" />
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Prior Reports</legend>
+        <div><i>All dates and reports of services, associated notes, and summaries:</i></div>
+        <div>
+            <table class="table table-condensed table-hover span8">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>contains</th>
+                        <th>date</th>
+                        <th>upload files</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="span1 offset1">Admission
+                        </td>
+                        <td>
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="admission" value="yes" /></label>
+                        </td>
+                        <td>
+                            <input type="text" class="datepicker" />
+                        </td>
+                        <td>
+                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="span1 offset1">H & P
+                        </td>
+                        <td>
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="admission" value="yes" /></label>
+                        </td>
+                        <td>
+                            <input type="text" class="datepicker" />
+                        </td>
+                        <td>
+                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="span1 offset1">Discharge
+                        </td>
+                        <td>
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="admission" value="yes" /></label>
+                        </td>
+                        <td>
+                            <input type="text" class="datepicker" />
+                        </td>
+                        <td>
+                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="span1 offset1">Catherizations
+                        </td>
+                        <td>
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="admission" value="yes" /></label>
+                        </td>
+                        <td>
+                            <input type="text" class="datepicker" />
+                        </td>
+                        <td>
+                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="span1 offset1">Surgeries
+                        </td>
+                        <td>
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="admission" value="yes" /></label>
+                        </td>
+                        <td>
+                            <input type="text" class="datepicker" />
+                        </td>
+                        <td>
+                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="span1 offset1">Consultation
+                        </td>
+                        <td>
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="admission" value="yes" /></label>
+                        </td>
+                        <td>
+                            <input type="text" class="datepicker" />
+                        </td>
+                        <td>
+                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="addrow"></div>
+        <div class="span4"><b>Additional reports</b></div>
+        <div class="span1">
+            <span class="btn btn-upload"><i class="icon-plus-sign"></i>Add Report</span>
+        </div>
+        <table>
+            <div class="form inline span8">
+                <tr>
+                    <div class="span1">
+                        <input type="text" />
+                    </div>
+                    <div class="span1">
+                        <label class="checkbox">
+                            <input type="checkbox" name="admission" value="yes" /></label>
+                    </div>
+                    <div class="span1 offset1">
+                        <input type="text" class="datepicker" />
+                    </div>
+                    <div class="span1">
+                        <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                    </div>
+                </tr>
+            </div>
+        </table>
+    </fieldset>
+
+<p>
+    <div class="span8 offset1 body-multiline">
+        <b>Email any pertinent information to:</b> <br />
+        Shannon Brulinski <br />
+        <a href="mailto:BRULINS@ccf.org">BRULINS@ccf.org</a> <br />
+        Cleveland Clinic, Cardiac Affiliate Program <br />
+        9500 Euclid Avenue, J4-134 <br />
+        Cleveland, Ohio <br />
+    </div>
+</p>     
+        </div>   
+</body>
+
+<script>
+    $(document).ready(function () {
+        $(".opt").hide();
+        $("#contact-check").click(function () {
+            if ($("#contact-check").attr("checked")) {
+                $(".opt").hide();
+                $("#contact-check").removeAttr("checked");
+            }
+            else {
+                $(".opt").show();
+                $("#contact-check").attr("checked", "checked");
+            }
+        });
+    });
+</script>
+</html>
