@@ -154,6 +154,11 @@
         color:red;
        }
 
+       #contact-bottom {
+        text-align:center;
+        padding-top:10px;
+       }
+
       </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -165,15 +170,13 @@
 <body>
     <div class="container">
     <p>
-        <div class="row">
             <div class="span12 body-multiline">
                 <b>Please Note:</b>
                 <i>This is NOT to be used for EMERGENCY cases. If you have an urgent request, please call Dr. Lytle's office at 216-444-6962</i>
             </div>
-        </div>
     </p>
 
-    <fieldset>
+    <fieldset class="span12">
         <legend>Request</legend>
 
         <div class="row">
@@ -234,7 +237,7 @@
 
     </fieldset>
 
-    <fieldset>
+    <fieldset class="span12">
         <legend>Patient Demographics</legend>
         <div class="row">
             <div class="span4 offset1">
@@ -318,12 +321,13 @@
         </div>
     </fieldset>
 
-    <fieldset>
-        <legend>Prior Reports</legend>
-        <div class="row span10"><p><i>All dates and reports of services, associated notes, and summaries (prior 12 months):</i></p></div>
+    <fieldset class="span12">
+        <legend>Prior Reports</legend> <div class="row">
+        <div class="span10 offset1"><p><i>All dates and reports of services, associated notes, and summaries (prior 12 months)</i></p></div></div>
+
         <div>
-            <p>
-            <table class="table table-condensed table-hover span10">
+            <p><div class="row">
+            <table class="table table-condensed table-hover span10 offset2">
                 <thead>
                     <tr>
                         <th></th>
@@ -425,47 +429,95 @@
                     </tr>
                 </tbody>
             </table>
+                </div>
                 </p>
         </div>
 
         <div class="addrow"></div>
-        <div class="span4"><b>Additional reports</b></div>
-        <div class="span7">
-            <span class="btn btn-upload" style="width:100px; margin-bottom:15px;"><i class="icon-plus-sign"></i>  Add Report</span>
+        <div class="row">
+            <div class="span3 offset2"><b>Additional reports</b></div>
+        </div>
+        <div class="span1">
+            <span class="btn btn-upload" margin-bottom:"15px;"><i class="icon-plus-sign"></i>  Add</span>
         </div>
         <div><p>
-        <table class="table table-condensed span10">
-            <tbody>
-                <tr>
-                    <td class="span1 offset1">
-                        <input type="text" style="width:100px;" />
-                    </td>
+            <table class="table table-condensed table-hover span9 offset2">
+                <tbody>
+                    <tr>
+                        <td class="span2 offset1">
+                            <input type="text" style="width: 100px;" />
+                        </td>
 
-                    <td><label class="checkbox inline">
+                        <td>
+                            <label class="checkbox inline">
                                 <input type="checkbox" name="more" value="yes" /></label>
-                    </td>
+                        </td>
 
-                    <td>
-                        <input type="text" class="datepicker" />
-                    </td>
+                        <td>
+                            <input type="text" class="datepicker" />
+                        </td>
 
-                    <td>
-                        <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
-                    </td>
+                        <td>
+                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                        </td>
 
-                </tr>
+                    </tr>
                 </tbody>
-        </table></p></div>
+            </table></p></div>
+
+        <div class="row"><div class="span9 offset1">
+                <p><i>Copies of images for prior surgeries, catheterizations, 
+            angiograms, PCI, echoes, CT, etc (within current admission & prior 12 months)</i></p>
+            </div></div>
+
+            <p>
+                <div class="row">
+            <table class="table table-condensed table-hover span10 offset2">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>contains</th>
+                        <th>date</th>
+                        <th>upload files</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="span2 offset1">Please indicate:
+                        </td>
+                        <td>
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="admission" value="yes" /></label>
+                        </td>
+                        <td>
+                            <input type="text" class="datepicker" />
+                        </td>
+                        <td>
+                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+                    </div>
+                </p>
+
     </fieldset>
 
 <p>
-    <div class="span8 offset1 body-multiline">
-        <b>Email any pertinent information to:</b> <br />
-        Shannon Brulinski <br />
-        <a href="mailto:BRULINS@ccf.org">BRULINS@ccf.org</a> <br />
-        Cleveland Clinic, Cardiac Affiliate Program <br />
-        9500 Euclid Avenue, J4-134 <br />
-        Cleveland, Ohio <br />
+    <div class="body-multiline" id="contact-bottom">
+        <b>Email any pertinent information to:</b>
+        <br />
+        Shannon Brulinski
+        <br />
+        <a href="mailto:BRULINS@ccf.org">BRULINS@ccf.org</a>
+        <br />
+        Cleveland Clinic, Cardiac Affiliate Program
+        <br />
+        9500 Euclid Avenue, J4-134
+        <br />
+        Cleveland, Ohio
+        <br />
     </div>
 </p>     
         </div>   
