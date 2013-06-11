@@ -154,6 +154,10 @@
         color:red;
        }
 
+       #contact-bottom {
+        text-align:center;
+       }
+
       </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -168,7 +172,7 @@
         <div class="row">
             <div class="span12 body-multiline">
                 <b>Please Note:</b>
-                <i>This is NOT to be used for EMERGENCY cases. If you have an urgent request, please call Dr. Lytle's office at 216-444-6962</i>
+                <i>This is NOT to be used for EMERGENCY cases. If you have an urgent request, please call Dr. Cacchione's office at 216-445-4043</i>
             </div>
         </div>
     </p>
@@ -320,10 +324,15 @@
 
     <fieldset>
         <legend>Prior Reports</legend>
-        <div class="row span10"><p><i>All dates and reports of services, associated notes, and summaries (prior 12 months):</i></p></div>
+        <div class="row">
+            <div class="span10 offset2">
+                <i>All dates and reports of services, associated notes, and summaries (prior 12 months):</i>
+            </div>
+        </div>
         <div>
             <p>
-            <table class="table table-condensed table-hover span10">
+                <div class="row">
+            <table class="table table-condensed table-hover span10 offset2">
                 <thead>
                     <tr>
                         <th></th>
@@ -336,6 +345,21 @@
                 <tbody>
                     <tr>
                         <td class="span2 offset1">Admission
+                        </td>
+                        <td>
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="admission" value="yes" /></label>
+                        </td>
+                        <td>
+                            <input type="text" class="datepicker" />
+                        </td>
+                        <td>
+                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="span2 offset1">Current Medications
                         </td>
                         <td>
                             <label class="checkbox inline">
@@ -395,7 +419,7 @@
                     </tr>
 
                     <tr>
-                        <td class="span2 offset1">Surgeries
+                        <td class="span2 offset1">Stress Test
                         </td>
                         <td>
                             <label class="checkbox inline">
@@ -425,47 +449,62 @@
                     </tr>
                 </tbody>
             </table>
+                    </div>
                 </p>
         </div>
 
-        <div class="addrow"></div>
-        <div class="span4"><b>Additional reports</b></div>
-        <div class="span7">
-            <span class="btn btn-upload" style="width:100px; margin-bottom:15px;"><i class="icon-plus-sign"></i>  Add Report</span>
-        </div>
-        <div><p>
-        <table class="table table-condensed span10">
-            <tbody>
-                <tr>
-                    <td class="span1 offset1">
-                        <input type="text" style="width:100px;" />
-                    </td>
+        <div class="row"><div class="span10 offset2">
+            <i>Copies of images for prior surgeries, catheterizations, 
+            angiograms, PCI, echoes, CT, etc (within current admission & prior 12 months)</i>
+        </div></div>
+        <div>
+            <p>
+            <div class="row">
+            <table class="table table-condensed table-hover span10 offset2">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>contains</th>
+                        <th>date</th>
+                        <th>upload files</th>
+                    </tr>
+                </thead>
 
-                    <td><label class="checkbox inline">
-                                <input type="checkbox" name="more" value="yes" /></label>
-                    </td>
-
-                    <td>
-                        <input type="text" class="datepicker" />
-                    </td>
-
-                    <td>
-                        <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
-                    </td>
-
-                </tr>
+                <tbody>
+                    <tr>
+                        <td class="span2 offset1">Please indicate:
+                        </td>
+                        <td>
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="admission" value="yes" /></label>
+                        </td>
+                        <td>
+                            <input type="text" class="datepicker" />
+                        </td>
+                        <td>
+                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                        </td>
+                    </tr>
                 </tbody>
-        </table></p></div>
+            </table>
+                </div>
+                </p>
+        </div>
     </fieldset>
 
 <p>
-    <div class="span8 offset1 body-multiline">
-        <b>Email any pertinent information to:</b> <br />
-        Shannon Brulinski <br />
-        <a href="mailto:BRULINS@ccf.org">BRULINS@ccf.org</a> <br />
-        Cleveland Clinic, Cardiac Affiliate Program <br />
-        9500 Euclid Avenue, J4-134 <br />
-        Cleveland, Ohio <br />
+    <div class="body-multiline" id="contact-bottom">
+        <b>Email any pertinent information to:</b>
+        <br />
+        Deborah Pora
+        <br />
+        <a href="mailto:porad@ccf.org">porad@ccf.org</a>
+        <br />
+        Cleveland Clinic, Cardiac Affiliate Program
+        <br />
+        9500 Euclid Avenue, J4-134
+        <br />
+        Cleveland, Ohio 44195<br />
     </div>
 </p>     
         </div>   

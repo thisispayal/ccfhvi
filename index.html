@@ -9,6 +9,7 @@
 
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet" />
       <style type="text/css">
           ::selection {
               background-color: black;
@@ -91,6 +92,14 @@
             background-color:rgba(124,183,227,.2);
           }
 
+          iframe {
+               width:1500px;
+               height:1000px;
+               border:none; 
+               overflow:hidden;
+               margin:auto;
+          }
+
       </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -122,7 +131,7 @@
                     <ul class="dropdown-menu">
                         <li data-value="EchoQA" id="EchoQA-choice"><a>Echo QA</a></li>
                         <li data-value="SO-med-elect" id="SO-med-elect-choice"><a href="SO-surg-elect.html">Surgical Second Opinion - Elective</a></li>
-                        <li data-value ="SO-surg-elect" id="SO-surg-elect-choice"><a>Medical Second Opinion - Elective</a></li>
+                        <li data-value ="SO-surg-elect" id="SO-surg-elect-choice"><a href="SO-med-elect.html">Medical Second Opinion - Elective</a></li>
                     </ul>
                 </div>
 
@@ -132,6 +141,9 @@
        
         </div>
 
+        <iframe src="SO-med-elect.html" id="med-elect-frame"></iframe>
+        <iframe src="EchoQA.html" id="EchoQA-frame"></iframe>
+        
         <hr>
 
         <div class="footer">
@@ -153,6 +165,9 @@
             $("#ReadingMD-row").hide();
             $("#PerformingMD-row").hide();
             $(".onselection").hide();
+            $("#EchoQA-frame").hide();
+            $("#med-elect-frame").hide();
+
             var dropdownwidth = $(".dropdown-menu").css("width");
             $(".dropdown-menu > li").css("width", dropdownwidth);
             $(".datepicker").datepicker();
@@ -161,13 +176,7 @@
             $("#EchoQA-choice").click(function () {
                 console.log("yay");
                 $("#appendedInputButton").attr("value", "Echo QA");
-                
-                $.get("EchoQA.html", function (data) {
-                    $(".onselection").append(data);
-                    console.log("success");
-                });
-                
-                $(".onselection").show();
+                $("#EchoQA-frame").show();
             });
 
             $("#TEE-choice").click(function () {
