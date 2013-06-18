@@ -347,7 +347,7 @@
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th>contains</th>
+                                    <th>included</th>
                                     <th>date</th>
                                     <th>upload files</th>
                                 </tr>
@@ -479,7 +479,7 @@
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th>contains</th>
+                                    <th>included</th>
                                     <th>date</th>
                                     <th>upload files</th>
                                 </tr>
@@ -523,20 +523,25 @@
         </div>
 
         <div class="span12 body-multiline">
-            <b>Turn Around Times:</b> Cases submitted to The CCHS Heart and Vascular Institute for review are not intended for emergency cases 
+            <p><b>Turn Around Times:</b> Cases submitted to The CCHS Heart and Vascular Institute for review are not intended for emergency cases 
             or any use that requires a specified response time. Typical case review response time is contingent upon receipt of required imaging 
             studies and patient history as indicated in the case review forms.
-                                                
+            </p>
+            
+            <p>                                    
             <b>Scope of Services:</b> The CCHS Heart and Vascular Institute accepts electronic remote submittal of patient case reviews and may 
             perform some Heart & Vascular related services using remote electronic means. Services or consultations not intended for fulfillment 
             by The CCHS Heart and Vascular Institute shall be accommodated separately and are not part of the services offered through The CCHS 
             Heart and Vascular Institute. The CCHS Heart and Vascular Institute shall not be held liable for dissemination of any electronically 
             acquired information for purposes not directly serviced or offered by The CCHS Heart and Vascular Institute.
-                                                           
+            </p>                                            
+            
+            <p>
             <b>Hours of Operation:</b> CC HVI Affiliate group is responsible for image transfers that occur during regular business hours 
             (8 a.m.-5 p.m. EST). Any transfer received after 5 p.m. EST or during weekend hours/holidays will be accepted on Monday morning 
             (or Tuesday morning incase of a holiday weekend) and CC HVI shall not be held liable to accept studies during off hours.
-        </div>
+        </p>
+                </div>
     
     </div>   
 </body>
@@ -563,7 +568,7 @@
             $("#contact-check-yes").removeAttr("checked");
         });
 
-        $("td.day").click(function () {
+        $(".datepicker.dropdown-menu").on('click', $('td.day'), function () {
             $(".datepicker.dropdown-menu").hide()
         });
     });
