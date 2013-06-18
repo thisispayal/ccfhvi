@@ -150,6 +150,10 @@
             font-weight: bold;
         }
 
+          label.radio.inline {
+            width:15%;
+          }
+
        .req {
         color:red;
        }
@@ -173,7 +177,10 @@
     <p>
             <div class="span12 body-multiline">
                 <b>Please Note:</b>
-                <i>The Heart and vascular Institute remote electronic submittal services shall not  be used for <b>EMERGENCY</b> cases. If you have an immediate request, please call Dr. Lytle’s office at 216-444-6962 for surgical case reviews and Dr. Cacchione's office at 216-445-4043 for cardiovascular medicine reviews.</i>
+                <i>The Heart and Vascular Institute remote electronic submittal services 
+                    shall not  be used for <b>EMERGENCY</b> cases. If you have an immediate request, 
+                    please call Dr. Lytle’s office at 216-444-6962 for surgical case reviews and Dr. 
+                    Cacchione's office at 216-445-4043 for cardiovascular medicine reviews.</i>
             </div>
     </p>
 
@@ -208,18 +215,19 @@
         </div>
 
         <div class="row">
-            <div class="span4 offset1 body-multiline">
-                Has anyone from Cleveland Clinic been contacted regarding the patient? <span class="req">*</span>
+                <div class="span4 offset1 body-multiline">
+                    Has anyone from Cleveland Clinic been contacted regarding the patient? <span class="req">*</span>
+                </div>
+                <div class="span4">
+                    <label class="radio inline">
+                        <input id="contact-check-yes" class="radioOptions" type="radio" name="contacted" />
+                        Yes</label>
+                    <label class="radio inline">
+                    <input id="contact-check-no" class="radioOptions" type="radio" name="contacted" />
+                        No
+                    </label>
+                </div>
             </div>
-            <div class="span1">
-                <label class="checkbox inline">
-                    <input id="contact-check-yes" type="checkbox" name="contacted" />
-                    Yes
-                    <input id="contact-check-no" type="checkbox" name="not-contacted" />
-                    No
-                </label>
-            </div>
-        </div>
 
         <div class="opt">
             <div class="row">
@@ -560,6 +568,14 @@
                 $(".opt").show();
                 $("#contact-check-yes").attr("checked", "checked");
             }
+        });
+        $("#contact-check-no").click(function () {
+            $(".opt").hide();
+            $("#contact-check-yes").removeAttr("checked");
+        });
+
+        $("td.day").click(function () {
+            $(".datepicker.dropdown-menu").hide()
         });
     });
 </script>
