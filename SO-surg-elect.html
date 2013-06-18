@@ -156,7 +156,8 @@
 
        #contact-bottom {
         text-align:center;
-        padding-top:10px;
+        margin-top:20px;
+        margin-bottom:20px;
        }
 
       </style>
@@ -172,7 +173,7 @@
     <p>
             <div class="span12 body-multiline">
                 <b>Please Note:</b>
-                <i>This is NOT to be used for EMERGENCY cases. If you have an urgent request, please call Dr. Lytle's office at 216-444-6962</i>
+                <i>The Heart and vascular Institute remote electronic submittal services shall not  be used for <b>EMERGENCY</b> cases. If you have an immediate request, please call Dr. Lytle’s office at 216-444-6962 for surgical case reviews and Dr. Cacchione's office at 216-445-4043 for cardiovascular medicine reviews.</i>
             </div>
     </p>
 
@@ -193,7 +194,7 @@
                 Confirmation E-mail <span class="req">*</span>
             </div>
             <div class="span6">
-                <input type="text" />
+                <input type="email" />
             </div>
         </div>
 
@@ -212,8 +213,10 @@
             </div>
             <div class="span1">
                 <label class="checkbox inline">
-                    <input id="contact-check" type="checkbox" name="contacted" />
+                    <input id="contact-check-yes" type="checkbox" name="contacted" />
                     Yes
+                    <input id="contact-check-no" type="checkbox" name="not-contacted" />
+                    No
                 </label>
             </div>
         </div>
@@ -507,8 +510,8 @@
 
     </fieldset>
 
-<p>
-    <div class="body-multiline" id="contact-bottom">
+
+    <div class="span12 body-multiline" id="contact-bottom">
         <b>Email any pertinent information to:</b>
         <br />
         Shannon Brulinski
@@ -522,7 +525,22 @@
         Cleveland, Ohio
         <br />
     </div>
-</p>     
+
+        <div class="span12 body-multiline">
+            <b>Turn Around Times:</b> Cases submitted to The CCHS Heart and Vascular Institute for review are not intended for emergency cases 
+            or any use that requires a specified response time. Typical case review response time is contingent upon receipt of required imaging 
+            studies and patient history as indicated in the case review forms.
+                                                
+            <b>Scope of Services:</b> The CCHS Heart and Vascular Institute accepts electronic remote submittal of patient case reviews and may 
+            perform some Heart & Vascular related services using remote electronic means. Services or consultations not intended for fulfillment 
+            by The CCHS Heart and Vascular Institute shall be accommodated separately and are not part of the services offered through The CCHS 
+            Heart and Vascular Institute. The CCHS Heart and Vascular Institute shall not be held liable for dissemination of any electronically 
+            acquired information for purposes not directly serviced or offered by The CCHS Heart and Vascular Institute.
+                                                           
+            <b>Hours of Operation:</b> CC HVI Affiliate group is responsible for image transfers that occur during regular business hours 
+            (8 a.m.-5 p.m. EST). Any transfer received after 5 p.m. EST or during weekend hours/holidays will be accepted on Monday morning 
+            (or Tuesday morning incase of a holiday weekend) and CC HVI shall not be held liable to accept studies during off hours.
+        </div>
         </div>   
 </body>
 
@@ -533,14 +551,14 @@
     $(document).ready(function () {
         $(".datepicker").datepicker();
         $(".opt").hide();
-        $("#contact-check").click(function () {
-            if ($("#contact-check").attr("checked")) {
+        $("#contact-check-yes").click(function () {
+            if ($("#contact-check-yes").attr("checked")) {
                 $(".opt").hide();
-                $("#contact-check").removeAttr("checked");
+                $("#contact-check-yes").removeAttr("checked");
             }
             else {
                 $(".opt").show();
-                $("#contact-check").attr("checked", "checked");
+                $("#contact-check-yes").attr("checked", "checked");
             }
         });
     });
