@@ -345,7 +345,7 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>contains</th>
+                        <th>included</th>
                         <th>date</th>
                         <th>upload files</th>
                     </tr>
@@ -363,7 +363,7 @@
                             <input type="text" class="datepicker" />
                         </td>
                         <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                            <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
                         </td>
                     </tr>
 
@@ -378,7 +378,7 @@
                             <input type="text" class="datepicker" />
                         </td>
                         <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                            <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
                         </td>
                     </tr>
 
@@ -393,7 +393,7 @@
                             <input type="text" class="datepicker" />
                         </td>
                         <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                            <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
                         </td>
                     </tr>
 
@@ -408,7 +408,7 @@
                             <input type="text" class="datepicker" />
                         </td>
                         <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                            <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
                         </td>
                     </tr>
 
@@ -423,7 +423,7 @@
                             <input type="text" class="datepicker" />
                         </td>
                         <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                            <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
                         </td>
                     </tr>
 
@@ -438,7 +438,7 @@
                             <input type="text" class="datepicker" />
                         </td>
                         <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                            <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
                         </td>
                     </tr>
                 </tbody>
@@ -449,72 +449,60 @@
 
         <div class="addrow"></div>
         <div class="row">
-            <div class="span3 offset2"><b>Additional reports</b></div>
+            <div class="span1 offset1">
+                <span class="btn btn-upload" margin-bottom:"15px;"><i class="icon-plus-sign"></i>  Add
+                </span>
+            </div>
+            <div class="span3"><b>Additional reports</b></div>
         </div>
-        <div class="span1">
-            <span class="btn btn-upload" margin-bottom:"15px;"><i class="icon-plus-sign"></i>  Add</span>
-        </div>
-        <div><p>
-            <table class="table table-condensed table-hover span9 offset2">
-                <tbody>
-                    <tr>
-                        <td class="span2 offset1">
-                            <input type="text" style="width: 100px;" />
-                        </td>
 
-                        <td>
-                            <label class="checkbox inline">
-                                <input type="checkbox" name="more" value="yes" /></label>
-                        </td>
-
-                        <td>
-                            <input type="text" class="datepicker" />
-                        </td>
-
-                        <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
-                        </td>
-
-                    </tr>
-                </tbody>
-            </table></p></div>
-
-        <div class="row"><div class="span9 offset1">
-                <p><i>Copies of images for prior surgeries, catheterizations, 
-            angiograms, PCI, echoes, CT, etc (within current admission & prior 12 months)</i></p>
-            </div></div>
-
+        <div>
             <p>
                 <div class="row">
-            <table class="table table-condensed table-hover span10 offset2">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>contains</th>
-                        <th>date</th>
-                        <th>upload files</th>
-                    </tr>
-                </thead>
+                    <table class="table table-condensed table-hover span10 offset2">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>included</th>
+                                <th>date</th>
+                                <th>upload files</th>
+                            </tr>
+                        </thead>
 
-                <tbody>
-                    <tr>
-                        <td class="span2 offset1">Please indicate:
-                        </td>
-                        <td>
-                            <label class="checkbox inline">
-                                <input type="checkbox" name="admission" value="yes" /></label>
-                        </td>
-                        <td>
-                            <input type="text" class="datepicker" />
-                        </td>
-                        <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-                    </div>
+                        <tbody>
+                            <tr>
+                                <td class="span2 offset1">
+                                    <input type="text" style="width: 100px;" />
+                                </td>
+
+                                <td>
+                                    <label class="checkbox inline">
+                                        <input type="checkbox" name="more" value="yes" /></label>
+                                </td>
+
+                                <td>
+                                    <input type="text" class="datepicker" />
+                                </td>
+
+                                <td>
+                                    <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="span9 offset1">
+                <p>
+                    <i>Continue to attach copies of images for prior surgeries, catheterizations, 
+            angiograms, PCI, echoes, CT, etc (within current admission & prior 12 months)</i>
                 </p>
+            </div>
+        </div>
 
     </fieldset>
 
@@ -535,19 +523,19 @@
     </div>
 
         <div class="span12 body-multiline">
-            <b>Turn Around Times:</b> Cases submitted to The CCHS Heart and Vascular Institute for review are not intended for emergency cases 
+            <p><b>Turn Around Times:</b> Cases submitted to The CCHS Heart and Vascular Institute for review are not intended for emergency cases 
             or any use that requires a specified response time. Typical case review response time is contingent upon receipt of required imaging 
-            studies and patient history as indicated in the case review forms.
+            studies and patient history as indicated in the case review forms.</p>
                                                 
-            <b>Scope of Services:</b> The CCHS Heart and Vascular Institute accepts electronic remote submittal of patient case reviews and may 
+            <p><b>Scope of Services:</b> The CCHS Heart and Vascular Institute accepts electronic remote submittal of patient case reviews and may 
             perform some Heart & Vascular related services using remote electronic means. Services or consultations not intended for fulfillment 
             by The CCHS Heart and Vascular Institute shall be accommodated separately and are not part of the services offered through The CCHS 
             Heart and Vascular Institute. The CCHS Heart and Vascular Institute shall not be held liable for dissemination of any electronically 
-            acquired information for purposes not directly serviced or offered by The CCHS Heart and Vascular Institute.
+            acquired information for purposes not directly serviced or offered by The CCHS Heart and Vascular Institute.</p>
                                                            
-            <b>Hours of Operation:</b> CC HVI Affiliate group is responsible for image transfers that occur during regular business hours 
+            <p><b>Hours of Operation:</b> CC HVI Affiliate group is responsible for image transfers that occur during regular business hours 
             (8 a.m.-5 p.m. EST). Any transfer received after 5 p.m. EST or during weekend hours/holidays will be accepted on Monday morning 
-            (or Tuesday morning incase of a holiday weekend) and CC HVI shall not be held liable to accept studies during off hours.
+            (or Tuesday morning incase of a holiday weekend) and CC HVI shall not be held liable to accept studies during off hours.</p>
         </div>
         </div>   
 </body>
