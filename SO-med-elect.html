@@ -163,6 +163,12 @@
         margin-top:20px;
         margin-bottom:20px;
        }
+          .btn.btn-large {
+            font-size: 30px;
+            padding-top:18px;
+            padding-bottom:18px;
+          }
+
 
       </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -336,7 +342,7 @@
             <legend>Prior Reports</legend>
             <div class="row">
                 <div class="span10 offset1">
-                    <p><i>All dates and reports of services, associated notes, and summaries (prior 12 months):</i></p>
+                    <p><i>All dates and reports of services, associated notes, and summaries (prior 12 months)</i></p>
                 </div>
             </div>
 
@@ -467,43 +473,9 @@
             <div class="row">
                 <div class="span9 offset1">
                     <p>
-                        <i>Copies of images for prior surgeries, catheterizations, 
-            angiograms, PCI, echoes, CT, etc (within current admission & prior 12 months):</i>
+                        <i>Accept the <b>Terms of Agreement</b> below and click <b>Continue</b> to attach associated images (within current admission & prior 12 months)</i>
                     </p>
                 </div>
-            </div>
-            <div>
-                <p>
-                    <div class="row">
-                        <table class="table table-condensed table-hover span10 offset2">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>included</th>
-                                    <th>date</th>
-                                    <th>upload files</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td class="span2 offset1">Please indicate:
-                                    </td>
-                                    <td>
-                                        <label class="checkbox inline">
-                                            <input type="checkbox" name="admission" value="yes" /></label>
-                                    </td>
-                                    <td>
-                                        <input type="text" class="datepicker" />
-                                    </td>
-                                    <td>
-                                        <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </p>
             </div>
         </fieldset>
 
@@ -523,6 +495,7 @@
         </div>
 
         <div class="span12 body-multiline">
+            <h3>Terms of Agreement <span class="req">*</span></h3>
             <p><b>Turn Around Times:</b> Cases submitted to The CCHS Heart and Vascular Institute for review are not intended for emergency cases 
             or any use that requires a specified response time. Typical case review response time is contingent upon receipt of required imaging 
             studies and patient history as indicated in the case review forms.
@@ -541,7 +514,18 @@
             (8 a.m.-5 p.m. EST). Any transfer received after 5 p.m. EST or during weekend hours/holidays will be accepted on Monday morning 
             (or Tuesday morning incase of a holiday weekend) and CC HVI shall not be held liable to accept studies during off hours.
         </p>
+
+            <label class="checkbox" style="font-size:20px; width: 20%;">
+                                            <input type="checkbox" id="acceptanceofterms" name="acceptance" />Acceptance of Terms </label>
                 </div>
+
+             <div class="row">
+                <div class="span12">
+                    <div class="btn btn-large" style="float: right;">
+                        <b>Continue ></b> 
+                    </div>
+                </div>
+            </div>
     
     </div>   
 </body>
