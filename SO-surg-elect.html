@@ -347,20 +347,21 @@
         </div>
     </fieldset>
 
-    <fieldset class="span12">
-        <legend>Prior Reports</legend> <div class="row">
-            <div class="span9 offset1">
-                <p><i>All dates and reports of services, associated notes, and summaries (prior 12 months)</i></p>
-            </div>
-        </div>
-
-        <div>
+        <fieldset class="span12">
+            <legend>Prior Reports</legend>
             <div class="row">
-                <!--[if IE]>
+                <div class="span9 offset1">
+                    <p><i>All dates and reports of services, associated notes, and summaries (prior 12 months)</i></p>
+                </div>
+            </div>
+
+            <div>
+                <div class="row">
+                    <!--[if IE]>
                         <table class="table table-condensed table-hover span10">
                        <![endif]-->
 
-                <![if !IE]>
+                    <![if !IE]>
                         <table class="table table-condensed table-hover span10 offset2">
                             <![endif]>                
                     
@@ -397,7 +398,7 @@
                                             <input type="checkbox" name="admission" value="yes" /></label>
                                     </td>
                                     <td>
-                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy"/>
+                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy" />
                                     </td>
                                     <td>
                                         <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
@@ -412,7 +413,7 @@
                                             <input type="checkbox" name="admission" value="yes" /></label>
                                     </td>
                                     <td>
-                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy"/>
+                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy" />
                                     </td>
                                     <td>
                                         <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
@@ -427,7 +428,7 @@
                                             <input type="checkbox" name="admission" value="yes" /></label>
                                     </td>
                                     <td>
-                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy"/>
+                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy" />
                                     </td>
                                     <td>
                                         <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
@@ -442,7 +443,7 @@
                                             <input type="checkbox" name="admission" value="yes" /></label>
                                     </td>
                                     <td>
-                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy"/>
+                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy" />
                                     </td>
                                     <td>
                                         <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
@@ -465,39 +466,38 @@
                                 </tr>
                             </tbody>
                         </table>
+                </div>
             </div>
-        </div>
 
-        <div class="addrow"></div>
-        <div class="row">
-            <!--[if IE]>
+            <div class="row">
+                <!--[if IE]>
             <div class="span2">
-                <span class="btn btn-upload" style="margin-bottom:15px;"><i class="icon-plus-sign"></i>  Add
+                <span class="btn btn-upload" id="add-button" style="margin-bottom:15px;"><i class="icon-plus-sign"></i>  Add
                 </span>
             </div>
             <![endif]-->
 
-            <![if !IE]>
+                <![if !IE]>
 
             <div class="span1 offset1">
-                <span class="btn btn-upload" style="margin-bottom:15px;"><i class="icon-plus-sign"></i>  Add
+                <span class="btn btn-upload" id="add-button" style="margin-bottom: 15px;"><i class="icon-plus-sign"></i>Add
                 </span>
             </div>
-            <![endif]>
+                <![endif]>
 
             <div class="span3"><b>Additional reports</b></div>
-        </div>
+            </div>
 
-        <div>
-                <div class="row">
+            <div>
+                <div class="row" id="add-report">
 
                     <!--[if IE]>
                         <table class="table table-condensed table-hover span10">
                        <![endif]-->
 
-                       <![if !IE]>
+                    <![if !IE]>
                         <table class="table table-condensed table-hover span10 offset2">
-                       <![endif]>
+                            <![endif]>
 
                         <thead>
                             <tr>
@@ -508,40 +508,85 @@
                             </tr>
                         </thead>
 
-                        <tbody>
-                            <tr>
-                                <td class="span2 offset1">
-                                    <input type="text" style="width: 100px;" />
-                                </td>
+                            <tbody>
+                                <tr>
+                                    <td class="span2 offset1">
+                                        <input type="text" style="width: 100px;" />
+                                    </td>
 
-                                <td>
-                                    <label class="checkbox inline">
-                                        <input type="checkbox" name="more" value="yes" /></label>
-                                </td>
+                                    <td>
+                                        <label class="checkbox inline">
+                                            <input type="checkbox" name="more" value="yes" /></label>
+                                    </td>
 
-                                <td>
-                                    <input type="text" class="datepicker" placeholder="mm/dd/yyyy"/>
-                                </td>
+                                    <td>
+                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy" />
+                                    </td>
 
-                                <td>
-                                    <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
-                                </td>
+                                    <td>
+                                        <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                                    </td>
 
-                            </tr>
-                        </tbody>
-                    </table>
+                                </tr>
+                            </tbody>
+                        </table>
                 </div>
-        </div>
 
-        <div class="row">
-            <div class="span9 offset1">
-                <p>
-                     <i>Accept the <b>Terms of Agreement</b> below and click <b>Continue</b> to attach associated images (within current admission & prior 12 months)</i>
-                </p>
+                <div class="row" id="addrowtemplate">
+
+                    <!--[if IE]>
+                        <table class="table table-condensed table-hover span10">
+                       <![endif]-->
+
+                    <![if !IE]>
+                        <table class="table table-condensed table-hover span10 offset2">
+                            <![endif]>
+
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>included</th>
+                                <th>date</th>
+                                <th>upload files</th>
+                            </tr>
+                        </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="span2 offset1">
+                                        <input type="text" style="width: 100px;" />
+                                    </td>
+
+                                    <td>
+                                        <label class="checkbox inline">
+                                            <input type="checkbox" name="more" value="yes" /></label>
+                                    </td>
+
+                                    <td>
+                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy" />
+                                    </td>
+
+                                    <td>
+                                        <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+
+                <div id="appendedarea"></div>
             </div>
-        </div>
 
-    </fieldset>
+            <div class="row">
+                <div class="span9 offset1">
+                    <p>
+                        <i>Accept the <b>Terms of Agreement</b> below and click <b>Continue</b> to attach associated images (within current admission & prior 12 months)</i>
+                    </p>
+                </div>
+            </div>
+
+        </fieldset>
 
 
     <div class="span12 body-multiline" id="contact-bottom">
@@ -608,6 +653,7 @@
 <script>
     $(document).ready(function () {
         $(".datepicker").datepicker();
+        $("#addrowtemplate").hide();
         $(".opt").hide();
         $("#contact-check-yes").click(function () {
             if ($("#contact-check-yes").attr("checked")) {
@@ -626,6 +672,11 @@
 
         $("td.day").click(function () {
             $(".datepicker.dropdown-menu").hide()
+        });
+
+        $("#add-button").click(function () {
+            //var filterToTBody = $("#addrowtemplate > table").children().filter("tbody").children();
+            var additionalReport = $("#addrowtemplate").clone().appendTo($("#appendedarea")).show();
         });
     });
 </script>
