@@ -138,7 +138,6 @@
         legend {
         padding: 0.2em 0.5em;
         font-size: 150%;
-        text-align: right;
         }
 
         label {
@@ -173,14 +172,25 @@
       </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
+      <!--[if IE]>
+        <style>
+          fieldset{
+            border-right-style:none;
+            border-bottom-style:none;
+            border-left-style:none;
+          }
+        </style>
+      <![endif]-->
+
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
+      <script src="../assets/js/html5shim.js"></script>
     <![endif]-->
+
   </head>
+
 <body>
     <div class="container">
-    <p>
             <div class="span12 body-multiline">
                 <b>Please Note:</b>
                 <i>The Heart and Vascular Institute remote electronic submittal services 
@@ -188,7 +198,6 @@
                     please call Dr. Lytle’s office at 216-444-6962 for surgical case reviews and Dr. 
                     Cacchione's office at 216-445-4043 for cardiovascular medicine reviews.</i>
             </div>
-    </p>
 
     <fieldset class="span12">
         <legend>Request</legend>
@@ -247,7 +256,7 @@
             <div class="row">
                 <div class="span4 offset1">When did the contact occur? <span class="req">*</span></div>
                 <div class="span2">
-                    <input type="text" class="datepicker"/>
+                    <input type="text" class="datepicker" placeholder="mm/dd/yyyy"/>
                 </div>
             </div>
         </div>
@@ -279,7 +288,7 @@
                 Patient Date of Birth <span class="req">*</span>
             </div>
             <div class="span6">
-                <input type="text" class="datepicker" />
+                <input type="text" class="datepicker" placeholder="mm/dd/yyyy" />
             </div>
         </div>
 
@@ -346,126 +355,150 @@
         </div>
 
         <div>
-            <p><div class="row">
-            <table class="table table-condensed table-hover span10 offset2">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>included</th>
-                        <th>date</th>
-                        <th>upload files</th>
-                    </tr>
-                </thead>
+            <div class="row">
+                <!--[if IE]>
+                        <table class="table table-condensed table-hover span10">
+                       <![endif]-->
 
-                <tbody>
-                    <tr>
-                        <td class="span2 offset1">Admission
-                        </td>
-                        <td>
-                            <label class="checkbox inline">
-                                <input type="checkbox" name="admission" value="yes" /></label>
-                        </td>
-                        <td>
-                            <input type="text" class="datepicker" />
-                        </td>
-                        <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
-                        </td>
-                    </tr>
+                <![if !IE]>
+                        <table class="table table-condensed table-hover span10 offset2">
+                            <![endif]>                
+                    
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>included</th>
+                            <th>date</th>
+                            <th>upload files</th>
+                        </tr>
+                    </thead>
 
-                    <tr>
-                        <td class="span2 offset1">H & P
-                        </td>
-                        <td>
-                            <label class="checkbox inline">
-                                <input type="checkbox" name="admission" value="yes" /></label>
-                        </td>
-                        <td>
-                            <input type="text" class="datepicker" />
-                        </td>
-                        <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
-                        </td>
-                    </tr>
+                            <tbody>
+                                <tr>
+                                    <td class="span2 offset1">Admission
+                                    </td>
+                                    <td>
+                                        <label class="checkbox inline">
+                                            <input type="checkbox" name="admission" value="yes" /></label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy" />
+                                    </td>
+                                    <td>
+                                        <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                                    </td>
+                                </tr>
 
-                    <tr>
-                        <td class="span2 offset1">Discharge
-                        </td>
-                        <td>
-                            <label class="checkbox inline">
-                                <input type="checkbox" name="admission" value="yes" /></label>
-                        </td>
-                        <td>
-                            <input type="text" class="datepicker" />
-                        </td>
-                        <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
-                        </td>
-                    </tr>
+                                <tr>
+                                    <td class="span2 offset1">H & P
+                                    </td>
+                                    <td>
+                                        <label class="checkbox inline">
+                                            <input type="checkbox" name="admission" value="yes" /></label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy"/>
+                                    </td>
+                                    <td>
+                                        <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                                    </td>
+                                </tr>
 
-                    <tr>
-                        <td class="span2 offset1">Catherizations
-                        </td>
-                        <td>
-                            <label class="checkbox inline">
-                                <input type="checkbox" name="admission" value="yes" /></label>
-                        </td>
-                        <td>
-                            <input type="text" class="datepicker" />
-                        </td>
-                        <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
-                        </td>
-                    </tr>
+                                <tr>
+                                    <td class="span2 offset1">Discharge
+                                    </td>
+                                    <td>
+                                        <label class="checkbox inline">
+                                            <input type="checkbox" name="admission" value="yes" /></label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy"/>
+                                    </td>
+                                    <td>
+                                        <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                                    </td>
+                                </tr>
 
-                    <tr>
-                        <td class="span2 offset1">Surgeries
-                        </td>
-                        <td>
-                            <label class="checkbox inline">
-                                <input type="checkbox" name="admission" value="yes" /></label>
-                        </td>
-                        <td>
-                            <input type="text" class="datepicker" />
-                        </td>
-                        <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
-                        </td>
-                    </tr>
+                                <tr>
+                                    <td class="span2 offset1">Catherizations
+                                    </td>
+                                    <td>
+                                        <label class="checkbox inline">
+                                            <input type="checkbox" name="admission" value="yes" /></label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy"/>
+                                    </td>
+                                    <td>
+                                        <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                                    </td>
+                                </tr>
 
-                    <tr>
-                        <td class="span2 offset1">Consultation
-                        </td>
-                        <td>
-                            <label class="checkbox inline">
-                                <input type="checkbox" name="admission" value="yes" /></label>
-                        </td>
-                        <td>
-                            <input type="text" class="datepicker" />
-                        </td>
-                        <td>
-                            <span class="btn btn-upload"><i class="icon-upload"></i> Upload</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-                </div>
-                </p>
+                                <tr>
+                                    <td class="span2 offset1">Surgeries
+                                    </td>
+                                    <td>
+                                        <label class="checkbox inline">
+                                            <input type="checkbox" name="admission" value="yes" /></label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy"/>
+                                    </td>
+                                    <td>
+                                        <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="span2 offset1">Consultation
+                                    </td>
+                                    <td>
+                                        <label class="checkbox inline">
+                                            <input type="checkbox" name="admission" value="yes" /></label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="datepicker" placeholder="mm/dd/yyyy" />
+                                    </td>
+                                    <td>
+                                        <span class="btn btn-upload"><i class="icon-upload"></i>Upload</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+            </div>
         </div>
 
         <div class="addrow"></div>
         <div class="row">
-            <div class="span1 offset1">
-                <span class="btn btn-upload" margin-bottom:"15px;"><i class="icon-plus-sign"></i>  Add
+            <!--[if IE]>
+            <div class="span2">
+                <span class="btn btn-upload" style="margin-bottom:15px;"><i class="icon-plus-sign"></i>  Add
                 </span>
             </div>
+            <![endif]-->
+
+            <![if !IE]>
+
+            <div class="span1 offset1">
+                <span class="btn btn-upload" style="margin-bottom:15px;"><i class="icon-plus-sign"></i>  Add
+                </span>
+            </div>
+            <![endif]>
+
             <div class="span3"><b>Additional reports</b></div>
         </div>
 
         <div>
-            <p>
                 <div class="row">
-                    <table class="table table-condensed table-hover span10 offset2">
+
+                    <!--[if IE]>
+                        <table class="table table-condensed table-hover span10">
+                       <![endif]-->
+
+                       <![if !IE]>
+                        <table class="table table-condensed table-hover span10 offset2">
+                       <![endif]>
+
                         <thead>
                             <tr>
                                 <th></th>
@@ -487,7 +520,7 @@
                                 </td>
 
                                 <td>
-                                    <input type="text" class="datepicker" />
+                                    <input type="text" class="datepicker" placeholder="mm/dd/yyyy"/>
                                 </td>
 
                                 <td>
@@ -498,7 +531,6 @@
                         </tbody>
                     </table>
                 </div>
-            </p>
         </div>
 
         <div class="row">
@@ -549,7 +581,7 @@
             (or Tuesday morning incase of a holiday weekend) and CC HVI shall not be held liable to accept studies during off hours.
             </p>
 
-            <label class="checkbox" style="font-size: 20px; width: 20%;">
+            <label class="checkbox" style="font-size: 20px; width: 22%;">
                 <input type="checkbox" id="acceptanceofterms" name="acceptance" />Acceptance of Terms
             </label>
         </div>
